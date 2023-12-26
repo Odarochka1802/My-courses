@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1>Панель управления</h1>
+ {% with total_images_created=request.user.images_created.count %}
+ <p>Добро пожаловать в вашу панель управления.
+ Вы добавили в закладки {{ total_images_created }} изображение{{ total_images_created|pluralize }}.
+ </p>
+ {% endwith %}
+ <p>Перетащите следующую кнопку на панель инструментов закладок.
+ добавить в закладки изображения с других сайтов →
+ <a href="javascript:{% include "bookmarklet_launcher.js" %}"
+class="button">Bookmark it</a>
+ </p>
+<p>Вы также можете <a href="{% url "edit" %}">отредактировать свой профиль</a> or <a href="{% url
+"password_change" %}">измените пароль</a>.
+ </p>
+{% endblock %}
