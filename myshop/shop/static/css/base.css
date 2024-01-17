@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+/* Обнуляем значения по умолчанию для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили страницы */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Стили заголовков */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+}
+
+/* Стили ссылок */
+a {
+    text-decoration: none;
+    color: #5993bb;
+}
+
+a:hover {
+    color: #77b6e2;
+}
+
+/* Стили кнопок и кнопок-ссылок */
+a.button, input[type="submit"] {
+    color: #fff;
+    background: #5993bb;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 0;
+    cursor: pointer;
+}
+
+a.button.light {
+    color: #666;
+    background: #ededed;
+}
+
+/* Выравнивание текста */
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Общие стили таблиц */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+    background: #efefef;
+}
+
+tbody tr.subtotal {
+    background: #ccc;
+}
+
+thead th, tbody tr.total {
+    background: #5993bb;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Корзина */
+table.cart {
+    margin-bottom: 40px;
+}
+
+table.cart img {
+    width: 180px;
+}
+
+tbody td.num {
+    text-align: right;
+}
+
+td input[type="submit"] {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+/* Формы */
+form p label {
+    font-size: 14px;
+    padding-bottom: 4px;
+}
+
+form p input {
+    width: 300px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border: 0;
+    background: #efefef;
+    color: #666;
+    border-radius: 4px;
+}
+
+/* Ошибки валидации формы */
+ul.errorlist {
+    color: #ff0000;
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+/* Шапка */
+#header, #subheader {
+    padding: 10px 100px;
+    font-size: 18px;
+    overflow: auto;
+}
+
+#subheader {
+    background: #ececec;
+    color: #444;
+}
+
+#header .logo {
+    font-family: 'Ubuntu', sans-serif;
+    float: left;
+    color: #333;
+    font-size: 22px;
+    margin-right: 10%;
+}
+
+#subheader .cart {
+    float: right;
+    padding-top: 4px;
+}
+
+/* Основное содержимое */
+#content {
+    padding: 0 100px;
+    overflow: hidden;
+}
+
+/* Боковая панель */
+#sidebar {
+    width: 220px;
+    padding: 30px 20px 0 0;
+    float: left;
+}
+
+#sidebar ul {
+    padding: 0;
+}
+
+#sidebar ul li {
+    list-style: none;
+    padding: 10px 14px;
+}
+
+#sidebar ul li a {
+    display: block;
+}
+
+#sidebar ul li.selected {
+    background: #5993bb;
+    border-radius: 4px;
+}
+
+#sidebar ul li.selected a {
+    color: #fff;
+}
+
+/* Основное содержимое (основная часть) */
+#main {
+    float: left;
+    width: calc(100% - 220px); /* Ширина минус ширина боковой панели */
+    overflow: hidden;
+}
+
+.product-list .item {
+    width: 25%;
+    padding: 10px 20px 10px 0;
+    float: left;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.product-list .item img {
+    width: 100%;
+    margin-bottom: 8px;
+}
