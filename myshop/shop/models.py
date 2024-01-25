@@ -1,9 +1,5 @@
 from django.db import models
-
-# Create your models here.
-from django.db import models
 from django.urls import reverse
-
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
@@ -15,7 +11,6 @@ class Category(models.Model):
         indexes = [
             models.Index(fields=['name']),
         ]
-
         verbose_name = 'category'
         verbose_name_plural = 'categories'
 
@@ -44,7 +39,6 @@ class Product(models.Model):
 
     class Meta:
         ordering = ['name']
-
         indexes = [
             models.Index(fields=['id', 'slug']),
             models.Index(fields=['name']),
