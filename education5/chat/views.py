@@ -6,11 +6,9 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def course_chat_room(request, course_id):
     try:
-        # извлечь курс с заданным id, к которому
-        # присоединился текущий пользователь
+        # retrieve course with given id joined by the current user
         course = request.user.courses_joined.get(id=course_id)
     except:
-        # пользователь не является студентом курса либо
-        # курс не существует
+        # user is not a student of the course or course does not exist
         return HttpResponseForbidden()
     return render(request, 'chat/room.html', {'course': course})
